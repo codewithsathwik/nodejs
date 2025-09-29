@@ -1,7 +1,7 @@
 const { log } = require("console");
 const fs = require("fs");
 const { json } = require("stream/consumers");
-const filePath = "./task.json";
+const filePath = "./todo/task.json";
 
 
 let command = process.argv[2];
@@ -45,6 +45,7 @@ const removeTask = (task) =>{
         }
     });
     saveTasks(tasks);
+    listTask();
 }
 
 if(command === "register"){
